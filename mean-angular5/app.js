@@ -7,6 +7,9 @@ var bodyParser = require('body-parser');
 var book = require('./routes/book');
 var app = express();
 
+// app.engine('html', require('ejs').renderFile);
+// app.set('view engine', 'html');
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
@@ -32,7 +35,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.set('view engine', 'ejs');
+//app.set('view engine', 'ejs');
 
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
