@@ -14,11 +14,11 @@ const appRoutes: Routes = [
     path: 'books',
     component: BookComponent,
     data: { title: 'Book List' }
-  },
-  { path: '',
-    redirectTo: '/books',
-    pathMatch: 'full'
-  }
+  }//,
+  // { path: '',
+  //   redirectTo: 'books',
+  //   pathMatch: 'full'
+  // }
 ];
 
 @NgModule({
@@ -26,7 +26,7 @@ const appRoutes: Routes = [
     AppComponent,
     BookComponent
   ],
-  imports: [
+  imports:  [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(
